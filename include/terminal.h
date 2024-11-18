@@ -3,7 +3,9 @@
 #include "utils.h"
 
 #ifdef _WIN32
-#include <windows.h>     // windows api
+#define NOMINMAX
+#include <windows.h>  // windows api
+#undef NOMINMAX
 extern HANDLE hStdin;    // handle for windows input stream
 extern DWORD orig_mode;  // stores the original term params
 #else
