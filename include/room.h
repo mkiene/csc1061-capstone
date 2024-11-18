@@ -1,7 +1,7 @@
 #pragma once
 
-#include "../include/level.h"
-#include "../include/utils.h"
+#include "level.h"
+#include "utils.h"
 
 class Room
 {

@@ -3,9 +3,9 @@
 #include "utils.h"
 
 #ifdef _WIN32
-#include <windows.h>  // windows api
-HANDLE hStdin;        // handle for windows input stream
-DWORD orig_mode;      // stores the original term params
+#include <windows.h>     // windows api
+extern HANDLE hStdin;    // handle for windows input stream
+extern DWORD orig_mode;  // stores the original term params
 #else
 #include <sys/ioctl.h>  // system call for unix i/o operations
 #include <termios.h>    // definitions used by unix terminal i/o interfaces

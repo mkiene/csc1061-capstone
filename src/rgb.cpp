@@ -1,5 +1,7 @@
 #include "../include/rgb.h"
 
+#include <algorithm>
+
 #include "../include/config.h"
 
 std::string get_color(rgb color)  // returns an ANSI escape sequence for drawing a color

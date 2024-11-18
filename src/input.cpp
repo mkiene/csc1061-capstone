@@ -1,8 +1,9 @@
 #include "../include/input.h"
 
-#include <unistd.h>
-
 #include "../include/config.h"
+#include "../include/entity.h"
+#include "../include/terminal.h"
+#include "../include/viewport.h"
 
 char get_ch()
 {

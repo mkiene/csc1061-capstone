@@ -3,8 +3,8 @@
 #include <iostream>
 
 #ifdef _WIN32
-HANDLE hStdin;
-DWORD orig_mode;
+HANDLE hStdin = GetStdHandle(STD_INPUT_HANDLE);
+DWORD orig_mode = 0;
 #else
 struct termios orig_termios;
 #endif
@@ -14,7 +14,6 @@ Terminal term;
 void Terminal::enable_raw()  // Allows the terminal to accept input without pressing "enter"
 {
 #ifdef _WIN32
-    hStdin = GetStdHandle(STD_INPUT_HANDLE);
     GetConsoleMode(hStdin, &orig_mode);
     DWORD new_mode = orig_mode & ~(ENABLE_ECHO_INPUT | ENABLE_LINE_INPUT);
     SetConsoleMode(hStdin, new_mode);
