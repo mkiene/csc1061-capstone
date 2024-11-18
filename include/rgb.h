@@ -2,6 +2,8 @@
 #include <string>
 #include <vector>
 
+// Unapplied
+
 struct rgb
 {
     int r, g, b;

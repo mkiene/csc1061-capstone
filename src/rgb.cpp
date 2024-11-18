@@ -4,6 +4,8 @@
 
 #include "../include/config.h"
 
+// Unapplied
+
 std::string get_color(rgb color)  // returns an ANSI escape sequence for drawing a color
 {
     return "\033[38;2;" + std::to_string(color.r) + ";" + std::to_string(color.g) + ";" + std::to_string(color.b) + "m";

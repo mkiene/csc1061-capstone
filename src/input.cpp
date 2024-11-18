@@ -5,7 +5,7 @@
 #include "../include/terminal.h"
 #include "../include/viewport.h"
 
-char get_ch()
+char get_ch()  // Retrieve keyboard input
 {
 #ifdef _WIN32
     char c = 0;
@@ -20,7 +20,7 @@ char get_ch()
 #endif
 }
 
-void input(char& inp)  // Manage input
+void input(char& inp)  // Direct input
 {
     inp = get_ch();
 
@@ -45,16 +45,16 @@ void input(char& inp)  // Manage input
 
             // viewport movement
 
-        case 'w':  // move viewport 0 up
+        case 'w':  // move viewport[0] up
             viewports[0]->level_pos.y -= 1.0f;
             break;
-        case 'a':  // move viewport 0 left
+        case 'a':  // move viewport[0] left
             viewports[0]->level_pos.x -= 1.0f;
             break;
-        case 's':  // move viewport 0 down
+        case 's':  // move viewport[0] down
             viewports[0]->level_pos.y += 1.0f;
             break;
-        case 'd':  // move viewport 0 right
+        case 'd':  // move viewport[0] right
             viewports[0]->level_pos.x += 1.0f;
             break;
     }

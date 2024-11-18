@@ -12,7 +12,7 @@ int get_random_int(int min, int max)
     return dist(rng);                                                         // result
 }
 
-bool in_line_of_sight(int x1, int y1, int x2, int y2, char blocker)  // adaptation of bresenham's line algorithm
+bool in_line_of_sight(int x1, int y1, int x2, int y2, char blocker)  // adaptation of bresenham's line algorithm.
 {
     int dx = std::abs(x2 - x1);
     int dy = -std::abs(y2 - y1);

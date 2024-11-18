@@ -12,9 +12,9 @@ void Entity::update()
 {
 }
 
-void Entity::move(int direction)
+void Entity::move(int direction)  // Attempt to move, checking for collisions
 {
-    vec2 next_pos;
+    vec2 next_pos;  // Potential future position
 
     switch (direction)
     {
@@ -32,11 +32,11 @@ void Entity::move(int direction)
             break;
     }
 
-    if (next_pos.x < level->size.x && next_pos.x >= 0 && next_pos.y < level->size.y && next_pos.y >= 0)
+    if (next_pos.x < level->size.x && next_pos.x >= 0 && next_pos.y < level->size.y && next_pos.y >= 0)  // collision check
     {
-        if (level->tiles[(int)next_pos.y][(int)next_pos.x].depth != depth)
+        if (level->tiles[(int)next_pos.y][(int)next_pos.x].depth != depth)  // Only collides with entites at the same depth level
         {
-            pos = next_pos;
+            pos = next_pos;  // If the move is valid, apply the next position to the current
         }
     }
 }

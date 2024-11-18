@@ -2,6 +2,8 @@
 
 #include <iostream>  // For console output
 
+// Unapplied
+
 // Queue for storing UI elements
 std::vector<ui_content> ui_draw_queue;
 

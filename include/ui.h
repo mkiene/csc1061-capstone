@@ -4,6 +4,8 @@
 #include <string>
 #include <vector>
 
+// Unapplied
+
 struct ui_content
 {
     int x, y;

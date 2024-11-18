@@ -7,7 +7,7 @@ int get_random_int(int min, int max);
 bool in_line_of_sight(int x1, int y1, int x2, int y2, char blocker);
 int sqr_dist(int x1, int y1, int x2, int y2);
 
-struct vec2
+struct vec2  // Custom 2d vector implementation
 {
     float x;
     float y;
@@ -50,7 +50,7 @@ struct vec2
 };
 
 template <typename T>
-std::vector<std::vector<std::vector<T>>> init_3d_tiles(size_t cols, size_t rows, size_t stack_size, const T &default_value)
+std::vector<std::vector<std::vector<T>>> init_3d_tiles(size_t cols, size_t rows, size_t stack_size, const T &default_value)  // Unapplied
 {
     std::vector<std::vector<std::vector<T>>> tiles;
 
