@@ -45,13 +45,13 @@ void Terminal::update_size()  // Determine the dimensions of the terminal window
 #ifdef _WIN32
     CONSOLE_SCREEN_BUFFER_INFO csbi;
     GetConsoleScreenBufferInfo(GetStdHandle(STD_OUTPUT_HANDLE), &csbi);
-    size.x = csbi.srWindow.Right - csbi.srWindow.Left + 1;
-    size.y = csbi.srWindow.Bottom - csbi.srWindow.Top + 1;
+    size.x = (float)(csbi.srWindow.Right - csbi.srWindow.Left + 1);
+    size.y = (float)(csbi.srWindow.Bottom - csbi.srWindow.Top + 1);
 #else
     struct winsize w;
     ioctl(STDOUT_FILENO, TIOCGWINSZ, &w);
-    size.x = w.ws_col;
-    size.y = w.ws_row;
+    size.x = (float)w.ws_col;
+    size.y = (float)w.ws_row;
 #endif
 }
 
