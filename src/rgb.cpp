@@ -22,9 +22,9 @@ rgb normalize_color(float sqr_dist, float max_radius, rgb color)  // Returns an 
     float scale = 1.0f - distance_ratio;
 
     // Apply the scale to the original color
-    new_color.r = std::max(0.0f, std::min(255.0f, color.r * scale));
-    new_color.g = std::max(0.0f, std::min(255.0f, color.g * scale));
-    new_color.b = std::max(0.0f, std::min(255.0f, color.b * scale));
+    new_color.r = (int)std::max(0.0f, std::min(255.0f, color.r * scale));
+    new_color.g = (int)std::max(0.0f, std::min(255.0f, color.g * scale));
+    new_color.b = (int)std::max(0.0f, std::min(255.0f, color.b * scale));
 
     return new_color;
 }

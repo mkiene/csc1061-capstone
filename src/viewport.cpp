@@ -30,11 +30,11 @@ void Viewport::draw()
     {
         for (int j = 0; j < size.x; j++)
         {
-            int draw_term_x = term_pos.x + j;
-            int draw_term_y = term_pos.y + i;
+            int draw_term_x = (int)term_pos.x + j;
+            int draw_term_y = (int)term_pos.y + i;
 
-            int draw_level_x = level_pos.x + j;
-            int draw_level_y = level_pos.y + i;
+            int draw_level_x = (int)level_pos.x + j;
+            int draw_level_y = (int)level_pos.y + i;
 
             std::vector<std::pair<int, char>> draw_queue;
 

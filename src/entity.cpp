@@ -34,7 +34,7 @@ void Entity::move(int direction)
 
     if (next_pos.x < level->size.x && next_pos.x >= 0 && next_pos.y < level->size.y && next_pos.y >= 0)
     {
-        if (level->tiles[next_pos.y][next_pos.x].depth != depth)
+        if (level->tiles[(int)next_pos.y][(int)next_pos.x].depth != depth)
         {
             pos = next_pos;
         }
