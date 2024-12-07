@@ -1,19 +1,15 @@
 #include "../include/entity.h"
 
+#include "../include/game.h"
 #include "../include/utils.h"
 
 std::vector<std::shared_ptr<Entity>> entities;
 
-void Entity::init()
-{
-}
-
-void Entity::update()
-{
-}
-
 void Entity::move(int direction)  // Attempt to move, checking for collisions
 {
+    if (game_paused)
+        return;
+
     vec2 next_pos;  // Potential future position
 
     switch (direction)
@@ -32,9 +28,12 @@ void Entity::move(int direction)  // Attempt to move, checking for collisions
             break;
     }
 
-    if (next_pos.x < level->size.x && next_pos.x >= 0 && next_pos.y < level->size.y && next_pos.y >= 0)  // collision check
+    if (level->get_tile(next_pos.x, next_pos.y).symbol == ' ')
+        return;
+
+    if (next_pos.x < level->get_size().x && next_pos.x > 0 && next_pos.y < level->get_size().y && next_pos.y > 0)  // collision check
     {
-        if (level->tiles[(int)next_pos.y][(int)next_pos.x].depth != depth)  // Only collides with entites at the same depth level
+        if (level->get_tile(next_pos.x, next_pos.y).depth != depth)  // Only collides with entites at the same depth level
         {
             pos = next_pos;  // If the move is valid, apply the next position to the current
         }

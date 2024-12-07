@@ -29,3 +29,5 @@ class Terminal
     static void disable_raw();  // Disables above.
     void update_size();         // Updates the 'vec2 size' property.
 };
+
+extern Terminal term;

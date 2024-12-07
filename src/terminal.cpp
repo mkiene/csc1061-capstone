@@ -62,6 +62,7 @@ void Terminal::init()
     std::cout << "\033[2J\033[H";      // clear screen
 
     enable_raw();
+
     update_size();
 
     atexit(clean);

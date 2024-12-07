@@ -201,6 +201,30 @@ src/game.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Torch.dir/build.make CMakeFiles/Torch.dir/src/game.cpp.s
 .PHONY : src/game.cpp.s
 
+src/generation.o: src/generation.cpp.o
+.PHONY : src/generation.o
+
+# target to build an object file
+src/generation.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Torch.dir/build.make CMakeFiles/Torch.dir/src/generation.cpp.o
+.PHONY : src/generation.cpp.o
+
+src/generation.i: src/generation.cpp.i
+.PHONY : src/generation.i
+
+# target to preprocess a source file
+src/generation.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Torch.dir/build.make CMakeFiles/Torch.dir/src/generation.cpp.i
+.PHONY : src/generation.cpp.i
+
+src/generation.s: src/generation.cpp.s
+.PHONY : src/generation.s
+
+# target to generate assembly for a file
+src/generation.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Torch.dir/build.make CMakeFiles/Torch.dir/src/generation.cpp.s
+.PHONY : src/generation.cpp.s
+
 src/input.o: src/input.cpp.o
 .PHONY : src/input.o
 
@@ -435,6 +459,9 @@ help:
 	@echo "... src/game.o"
 	@echo "... src/game.i"
 	@echo "... src/game.s"
+	@echo "... src/generation.o"
+	@echo "... src/generation.i"
+	@echo "... src/generation.s"
 	@echo "... src/input.o"
 	@echo "... src/input.i"
 	@echo "... src/input.s"

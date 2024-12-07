@@ -35,18 +35,73 @@ A few important points:
 
 class Viewport
 {
+   private:
+    vec2 level_pos;  // Position within the level
+    vec2 term_pos;   // Position within the terminal
+    vec2 size;       // Dimensions on the terminal
+
+    std::shared_ptr<Level> level;    // Current level
+    std::shared_ptr<Entity> target;  // Target entity to follow
+
    public:
-    vec2 level_pos;  // position within the level
-    vec2 term_pos;   // position within the terminal
-    vec2 size;       // dimensions on the terminal
+    // Constructor
+    Viewport(const vec2& level_pos = {0.0f, 0.0f}, const vec2& term_pos = {0.0f, 0.0f}, const vec2& size = {0.0f, 0.0f}, std::shared_ptr<Level> level = nullptr) : level_pos(level_pos), term_pos(term_pos), size(size), level(level)
+    {
+    }
 
-    std::shared_ptr<Level> level;  // The level to display
+    // Getters
+    vec2 get_level_pos() const
+    {
+        return level_pos;
+    }
+    vec2 get_term_pos() const
+    {
+        return term_pos;
+    }
+    vec2 get_size() const
+    {
+        return size;
+    }
+    std::shared_ptr<Level> get_level() const
+    {
+        return level;
+    }
+    std::shared_ptr<Entity> get_target() const
+    {
+        return target;
+    }
 
-    Viewport(vec2 level_pos = {0.0f, 0.0f}, vec2 term_pos = {0.0f, 0.0f}, vec2 size = {0.0f, 0.0f}, std::shared_ptr<Level> level = nullptr) : level_pos(level_pos), term_pos(term_pos), size(size), level(level){};  // Constructor
+    // Setters
+    void set_level_pos(const vec2& new_pos)
+    {
+        level_pos = new_pos;
+    }
+    void set_term_pos(const vec2& new_pos)
+    {
+        term_pos = new_pos;
+    }
+    void set_size(const vec2& new_size)
+    {
+        if (new_size.x <= 0 || new_size.y <= 0)
+            throw std::invalid_argument("Size must be positive");
+        size = new_size;
+    }
+    void set_level(std::shared_ptr<Level> new_level)
+    {
+        level = new_level;
+    }
+    void set_target(std::shared_ptr<Entity> new_target)
+    {
+        target = new_target;
+    }
 
-    void init();                // Initialize the viewport
-    void draw();                // Draw the contents of the level that are visible through the viewport to the terminal
-    void move(Entity& target);  // What the viewport should potentially follow
+    // Other
+
+    void init();
+    void draw() const;
+    void move();
+    void draw_line(vec2 p1, vec2 p2) const;
+    void update();
 };
 
 extern std::vector<std::shared_ptr<Viewport>> viewports;  // Global viewports list

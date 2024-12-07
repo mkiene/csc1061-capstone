@@ -21,17 +21,20 @@ extern float max_color_mult_for_dimming;  // Unapplied
 
 // Viewport
 extern bool clamp_viewport_to_level_bounds;  // Unapplied
-extern bool viewport_follow;                 // Unapplied
-extern float viewport_follow_speed;          // Unapplied
-extern int viewport_slack_x;                 // Unapplied
-extern int viewport_slack_y;                 // Unapplied
-extern int x_scaling;                        // Unapplied
+extern bool viewport_follow;
+extern bool draw_viewport_edges;
+extern float viewport_follow_speed;  // Unapplied
+extern int viewport_slack_x;         // Unapplied
+extern int viewport_slack_y;         // Unapplied
+extern int x_scaling;                // Unapplied
+extern int terminal_border_padding;
 
 // Game
-extern int level_width;         // Unapplied
-extern int level_height;        // Unapplied
-extern const char wall_symb;    // Unapplied
-extern const char empty_symb;   // Unapplied
-extern const char player_symb;  // Unapplied
-extern const char floor_symb;   // Unapplied
-extern int view_radius;         // Unapplied
+extern int level_width;        // Unapplied
+extern int level_height;       // Unapplied
+extern const char wall_symb;   // Unapplied
+extern const char empty_symb;  // Unapplied
+extern const char floor_symb;  // Unapplied
+extern int view_radius;        // Unapplied
+
+extern bool enable_LOS;

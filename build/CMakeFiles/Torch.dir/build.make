@@ -111,10 +111,24 @@ CMakeFiles/Torch.dir/src/game.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Torch.dir/src/game.cpp.s"
 	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/max/CSC1061-Capstone/src/game.cpp -o CMakeFiles/Torch.dir/src/game.cpp.s
 
+CMakeFiles/Torch.dir/src/generation.cpp.o: CMakeFiles/Torch.dir/flags.make
+CMakeFiles/Torch.dir/src/generation.cpp.o: /Users/max/CSC1061-Capstone/src/generation.cpp
+CMakeFiles/Torch.dir/src/generation.cpp.o: CMakeFiles/Torch.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/max/CSC1061-Capstone/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Torch.dir/src/generation.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Torch.dir/src/generation.cpp.o -MF CMakeFiles/Torch.dir/src/generation.cpp.o.d -o CMakeFiles/Torch.dir/src/generation.cpp.o -c /Users/max/CSC1061-Capstone/src/generation.cpp
+
+CMakeFiles/Torch.dir/src/generation.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Torch.dir/src/generation.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/max/CSC1061-Capstone/src/generation.cpp > CMakeFiles/Torch.dir/src/generation.cpp.i
+
+CMakeFiles/Torch.dir/src/generation.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Torch.dir/src/generation.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/max/CSC1061-Capstone/src/generation.cpp -o CMakeFiles/Torch.dir/src/generation.cpp.s
+
 CMakeFiles/Torch.dir/src/input.cpp.o: CMakeFiles/Torch.dir/flags.make
 CMakeFiles/Torch.dir/src/input.cpp.o: /Users/max/CSC1061-Capstone/src/input.cpp
 CMakeFiles/Torch.dir/src/input.cpp.o: CMakeFiles/Torch.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/max/CSC1061-Capstone/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Torch.dir/src/input.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/max/CSC1061-Capstone/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/Torch.dir/src/input.cpp.o"
 	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Torch.dir/src/input.cpp.o -MF CMakeFiles/Torch.dir/src/input.cpp.o.d -o CMakeFiles/Torch.dir/src/input.cpp.o -c /Users/max/CSC1061-Capstone/src/input.cpp
 
 CMakeFiles/Torch.dir/src/input.cpp.i: cmake_force
@@ -128,7 +142,7 @@ CMakeFiles/Torch.dir/src/input.cpp.s: cmake_force
 CMakeFiles/Torch.dir/src/level.cpp.o: CMakeFiles/Torch.dir/flags.make
 CMakeFiles/Torch.dir/src/level.cpp.o: /Users/max/CSC1061-Capstone/src/level.cpp
 CMakeFiles/Torch.dir/src/level.cpp.o: CMakeFiles/Torch.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/max/CSC1061-Capstone/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/Torch.dir/src/level.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/max/CSC1061-Capstone/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/Torch.dir/src/level.cpp.o"
 	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Torch.dir/src/level.cpp.o -MF CMakeFiles/Torch.dir/src/level.cpp.o.d -o CMakeFiles/Torch.dir/src/level.cpp.o -c /Users/max/CSC1061-Capstone/src/level.cpp
 
 CMakeFiles/Torch.dir/src/level.cpp.i: cmake_force
@@ -142,7 +156,7 @@ CMakeFiles/Torch.dir/src/level.cpp.s: cmake_force
 CMakeFiles/Torch.dir/src/main.cpp.o: CMakeFiles/Torch.dir/flags.make
 CMakeFiles/Torch.dir/src/main.cpp.o: /Users/max/CSC1061-Capstone/src/main.cpp
 CMakeFiles/Torch.dir/src/main.cpp.o: CMakeFiles/Torch.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/max/CSC1061-Capstone/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/Torch.dir/src/main.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/max/CSC1061-Capstone/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/Torch.dir/src/main.cpp.o"
 	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Torch.dir/src/main.cpp.o -MF CMakeFiles/Torch.dir/src/main.cpp.o.d -o CMakeFiles/Torch.dir/src/main.cpp.o -c /Users/max/CSC1061-Capstone/src/main.cpp
 
 CMakeFiles/Torch.dir/src/main.cpp.i: cmake_force
@@ -156,7 +170,7 @@ CMakeFiles/Torch.dir/src/main.cpp.s: cmake_force
 CMakeFiles/Torch.dir/src/rgb.cpp.o: CMakeFiles/Torch.dir/flags.make
 CMakeFiles/Torch.dir/src/rgb.cpp.o: /Users/max/CSC1061-Capstone/src/rgb.cpp
 CMakeFiles/Torch.dir/src/rgb.cpp.o: CMakeFiles/Torch.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/max/CSC1061-Capstone/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/Torch.dir/src/rgb.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/max/CSC1061-Capstone/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/Torch.dir/src/rgb.cpp.o"
 	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Torch.dir/src/rgb.cpp.o -MF CMakeFiles/Torch.dir/src/rgb.cpp.o.d -o CMakeFiles/Torch.dir/src/rgb.cpp.o -c /Users/max/CSC1061-Capstone/src/rgb.cpp
 
 CMakeFiles/Torch.dir/src/rgb.cpp.i: cmake_force
@@ -170,7 +184,7 @@ CMakeFiles/Torch.dir/src/rgb.cpp.s: cmake_force
 CMakeFiles/Torch.dir/src/room.cpp.o: CMakeFiles/Torch.dir/flags.make
 CMakeFiles/Torch.dir/src/room.cpp.o: /Users/max/CSC1061-Capstone/src/room.cpp
 CMakeFiles/Torch.dir/src/room.cpp.o: CMakeFiles/Torch.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/max/CSC1061-Capstone/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/Torch.dir/src/room.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/max/CSC1061-Capstone/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/Torch.dir/src/room.cpp.o"
 	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Torch.dir/src/room.cpp.o -MF CMakeFiles/Torch.dir/src/room.cpp.o.d -o CMakeFiles/Torch.dir/src/room.cpp.o -c /Users/max/CSC1061-Capstone/src/room.cpp
 
 CMakeFiles/Torch.dir/src/room.cpp.i: cmake_force
@@ -184,7 +198,7 @@ CMakeFiles/Torch.dir/src/room.cpp.s: cmake_force
 CMakeFiles/Torch.dir/src/terminal.cpp.o: CMakeFiles/Torch.dir/flags.make
 CMakeFiles/Torch.dir/src/terminal.cpp.o: /Users/max/CSC1061-Capstone/src/terminal.cpp
 CMakeFiles/Torch.dir/src/terminal.cpp.o: CMakeFiles/Torch.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/max/CSC1061-Capstone/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/Torch.dir/src/terminal.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/max/CSC1061-Capstone/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/Torch.dir/src/terminal.cpp.o"
 	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Torch.dir/src/terminal.cpp.o -MF CMakeFiles/Torch.dir/src/terminal.cpp.o.d -o CMakeFiles/Torch.dir/src/terminal.cpp.o -c /Users/max/CSC1061-Capstone/src/terminal.cpp
 
 CMakeFiles/Torch.dir/src/terminal.cpp.i: cmake_force
@@ -198,7 +212,7 @@ CMakeFiles/Torch.dir/src/terminal.cpp.s: cmake_force
 CMakeFiles/Torch.dir/src/ui.cpp.o: CMakeFiles/Torch.dir/flags.make
 CMakeFiles/Torch.dir/src/ui.cpp.o: /Users/max/CSC1061-Capstone/src/ui.cpp
 CMakeFiles/Torch.dir/src/ui.cpp.o: CMakeFiles/Torch.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/max/CSC1061-Capstone/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/Torch.dir/src/ui.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/max/CSC1061-Capstone/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/Torch.dir/src/ui.cpp.o"
 	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Torch.dir/src/ui.cpp.o -MF CMakeFiles/Torch.dir/src/ui.cpp.o.d -o CMakeFiles/Torch.dir/src/ui.cpp.o -c /Users/max/CSC1061-Capstone/src/ui.cpp
 
 CMakeFiles/Torch.dir/src/ui.cpp.i: cmake_force
@@ -212,7 +226,7 @@ CMakeFiles/Torch.dir/src/ui.cpp.s: cmake_force
 CMakeFiles/Torch.dir/src/utils.cpp.o: CMakeFiles/Torch.dir/flags.make
 CMakeFiles/Torch.dir/src/utils.cpp.o: /Users/max/CSC1061-Capstone/src/utils.cpp
 CMakeFiles/Torch.dir/src/utils.cpp.o: CMakeFiles/Torch.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/max/CSC1061-Capstone/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/Torch.dir/src/utils.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/max/CSC1061-Capstone/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/Torch.dir/src/utils.cpp.o"
 	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Torch.dir/src/utils.cpp.o -MF CMakeFiles/Torch.dir/src/utils.cpp.o.d -o CMakeFiles/Torch.dir/src/utils.cpp.o -c /Users/max/CSC1061-Capstone/src/utils.cpp
 
 CMakeFiles/Torch.dir/src/utils.cpp.i: cmake_force
@@ -226,7 +240,7 @@ CMakeFiles/Torch.dir/src/utils.cpp.s: cmake_force
 CMakeFiles/Torch.dir/src/viewport.cpp.o: CMakeFiles/Torch.dir/flags.make
 CMakeFiles/Torch.dir/src/viewport.cpp.o: /Users/max/CSC1061-Capstone/src/viewport.cpp
 CMakeFiles/Torch.dir/src/viewport.cpp.o: CMakeFiles/Torch.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/max/CSC1061-Capstone/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/Torch.dir/src/viewport.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/max/CSC1061-Capstone/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/Torch.dir/src/viewport.cpp.o"
 	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Torch.dir/src/viewport.cpp.o -MF CMakeFiles/Torch.dir/src/viewport.cpp.o.d -o CMakeFiles/Torch.dir/src/viewport.cpp.o -c /Users/max/CSC1061-Capstone/src/viewport.cpp
 
 CMakeFiles/Torch.dir/src/viewport.cpp.i: cmake_force
@@ -242,6 +256,7 @@ Torch_OBJECTS = \
 "CMakeFiles/Torch.dir/src/config.cpp.o" \
 "CMakeFiles/Torch.dir/src/entity.cpp.o" \
 "CMakeFiles/Torch.dir/src/game.cpp.o" \
+"CMakeFiles/Torch.dir/src/generation.cpp.o" \
 "CMakeFiles/Torch.dir/src/input.cpp.o" \
 "CMakeFiles/Torch.dir/src/level.cpp.o" \
 "CMakeFiles/Torch.dir/src/main.cpp.o" \
@@ -258,6 +273,7 @@ Torch_EXTERNAL_OBJECTS =
 Torch: CMakeFiles/Torch.dir/src/config.cpp.o
 Torch: CMakeFiles/Torch.dir/src/entity.cpp.o
 Torch: CMakeFiles/Torch.dir/src/game.cpp.o
+Torch: CMakeFiles/Torch.dir/src/generation.cpp.o
 Torch: CMakeFiles/Torch.dir/src/input.cpp.o
 Torch: CMakeFiles/Torch.dir/src/level.cpp.o
 Torch: CMakeFiles/Torch.dir/src/main.cpp.o
@@ -269,7 +285,7 @@ Torch: CMakeFiles/Torch.dir/src/utils.cpp.o
 Torch: CMakeFiles/Torch.dir/src/viewport.cpp.o
 Torch: CMakeFiles/Torch.dir/build.make
 Torch: CMakeFiles/Torch.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/max/CSC1061-Capstone/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Linking CXX executable Torch"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/max/CSC1061-Capstone/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Linking CXX executable Torch"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Torch.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

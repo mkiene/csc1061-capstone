@@ -1,21 +1,12 @@
 #pragma once
 
-#include "level.h"
 #include "utils.h"
 
-// Unapplied
-
-class Room
+struct Room
 {
-   public:
     vec2 pos;
     vec2 size;
-
-    Level level;
-
-    Room(vec2 pos = {0.0f, 0.0f}, vec2 size = {5.0f, 5.0f}) : pos(pos), size(size)
-    {
-    }
-
-    void create();
+    int id;
 };
+
+extern std::vector<std::shared_ptr<Room>> rooms;

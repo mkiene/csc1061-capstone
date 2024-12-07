@@ -5,6 +5,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/Torch.dir/src/entity.cpp.o.d"
   "CMakeFiles/Torch.dir/src/game.cpp.o"
   "CMakeFiles/Torch.dir/src/game.cpp.o.d"
+  "CMakeFiles/Torch.dir/src/generation.cpp.o"
+  "CMakeFiles/Torch.dir/src/generation.cpp.o.d"
   "CMakeFiles/Torch.dir/src/input.cpp.o"
   "CMakeFiles/Torch.dir/src/input.cpp.o.d"
   "CMakeFiles/Torch.dir/src/level.cpp.o"

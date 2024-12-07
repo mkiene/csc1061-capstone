@@ -14,7 +14,7 @@ struct ui_content
 
 extern std::vector<ui_content> ui_draw_queue;
 
-void draw_ui(std::stringstream &ui_stream);
+void draw_ui();
 
 template <typename... Args>
 void draw_ui_content(int x, int y, Args &&...args)  // Allows n arguments, and different datatypes!
@@ -31,3 +31,15 @@ void draw_ui_content(int x, int y, Args &&...args)  // Allows n arguments, and d
     ui_content item = {x, y, formatted_content};
     ui_draw_queue.push_back(item);
 }
+
+class Menu
+{
+   public:
+    int state;
+    void trigger_titlescreen();
+    void trigger_controls();
+
+    void update();
+};
+
+extern Menu menu;

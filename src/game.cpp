@@ -1,41 +1,64 @@
+#include <memory>
+
 #include "../include/config.h"
 #include "../include/entity.h"
+#include "../include/generation.h"
 #include "../include/level.h"
+#include "../include/menu.h"
 #include "../include/terminal.h"
+#include "../include/ui.h"
+#include "../include/utils.h"
 #include "../include/viewport.h"
 
-// Initialize the game. This sets up the terminal, level, viewport, and player.
+bool game_paused = true;
+
 void init_game()
 {
-    term.init();  // Initialize the terminal for the game. File: terminal.h/cpp
+    levels.clear();
+    entities.clear();
+    viewports.clear();
 
-    auto level = std::make_shared<Level>();  // Create a level object. File: level.h/cpp
-    level->size = {100, 100};                // Set the level size to be 100x100. File: level.h/cpp
-    level->depth = 0;                        // Set the level drawing  depth. File: level.h/cpp
-    level->init();                           // Initialize the level. File: level.h/cpp
-    levels.push_back(level);                 // Add the level to a global list of levels. File: level.h/cpp
+    term.init();
 
-    auto viewport = std::make_shared<Viewport>();  // Create a viewport object. File: viewport.h/cpp
-    viewport->size = {100, 40};                    // Set the viewport size to 100x40. File: viewport.h/cpp
-    viewport->level = level;                       // Set the viewport's level (which it will display). File: viewport.h/cpp
-    viewport->init();                              // Initialize the viewport. File: viewport.h/cpp
-    viewports.push_back(viewport);                 // Add the viewport to a global list of viewports. File: viewport.h/cpp
+    auto level = std::make_shared<Level>(vec2(0.0f, 0.0f), vec2(100.0f, 100.0f), 0);
+    levels.push_back(level);
 
-    auto player = std::make_shared<Player>();  // Create a Player object (inherits from Entity). File: Entity.h/cpp
-    player->pos = {5.0f, 5.0f};                // Set the player position to (5,5). This is relative to the origin of the level. File: entity.h/cpp
-    player->depth = -10;                       // Set the player drawing depth. File: entity.h/cpp
-    player->init();                            // Initialize the player. File: entity.h/cpp
-    player->level = level;                     // Set the player's level. File: entity.h/cpp
-    entities.push_back(player);                // Add the player to a global list of entities. File: entity.h/cpp
+    auto player = std::make_shared<Player>();
+    player->set_pos({20.0f, 20.0f});
+    player->set_depth(-5);
+    player->set_level(level);
+    entities.push_back(player);
+
+    auto viewport = std::make_shared<Viewport>();
+    viewport->set_size({1000, 1000});
+    viewport->set_level_pos({-10, -5});
+    viewport->set_level(level);
+    viewport->set_target(player);
+    viewport->init();
+    viewports.push_back(viewport);
+
+    auto generator = std::make_shared<Generator>();
+    generator->set_level(level);
+    generator->rogue(7, vec2(10.0f, 10.0f), {30.0f, 30.0f}, 3);
+    generator->automata(8, 35, 5, 4);
+    generator->remove_inaccessible();
+    generators.push_back(generator);
+
+    if (game_paused)
+        menu.trigger_titlescreen();
 }
 
 // Update the game state. This currently only updates the viewport list.
 
 void update_game()
 {
-    for (const auto& viewport : viewports)  // Loop through the viewport list. File: viewport.h/cpp
+    for (const auto& viewport : viewports)
     {
-        viewport->draw();              // Draw the contents of the level to the viewport. File: viewport.h/cpp
-        viewport->move(*entities[0]);  // Update the position of the viewport to follow the player (entity) object. File: viewport.h/cpp
+        viewport->update();
+    }
+
+    if (game_paused)
+    {
+        draw_ui();
     }
 }

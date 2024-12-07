@@ -902,4 +902,5 @@ CMakeFiles/Torch.dir/src/entity.cpp.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__split_buffer \
   /Users/max/CSC1061-Capstone/src/../include/level.h \
   /Users/max/CSC1061-Capstone/src/../include/tile.h \
-  /Users/max/CSC1061-Capstone/src/../include/utils.h
+  /Users/max/CSC1061-Capstone/src/../include/utils.h \
+  /Users/max/CSC1061-Capstone/src/../include/game.h

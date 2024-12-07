@@ -6,6 +6,7 @@
 int get_random_int(int min, int max);
 bool in_line_of_sight(int x1, int y1, int x2, int y2, char blocker);
 int sqr_dist(int x1, int y1, int x2, int y2);
+void clear_screen();
 
 struct vec2  // Custom 2d vector implementation
 {
@@ -36,7 +37,6 @@ struct vec2  // Custom 2d vector implementation
     {
         return {x / scalar, y / scalar};
     }
-
     float magnitude() const
     {
         return std::sqrt(x * x + y * y);
@@ -46,6 +46,12 @@ struct vec2  // Custom 2d vector implementation
     {
         float mag = magnitude();
         return {x / mag, y / mag};
+    }
+
+    vec2 sign() const
+    {
+        return {float(x > 0) - (x < 0),  // 1 if positive, -1 if negative, 0 if zero
+                float(y > 0) - (y < 0)};
     }
 };
 

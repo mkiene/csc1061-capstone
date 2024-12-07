@@ -6,23 +6,59 @@
 #include "level.h"
 #include "utils.h"
 
-class Entity  // Entity object. This is fairly straightforward. Player derives from this class
+class Entity
 {
-   public:
+   private:
     vec2 pos;
-    char symbol;  // What the viewport should render for the entity
+    char symbol;
     int depth;
 
-    std::shared_ptr<Level> level;  // Which level the entity exists within
+   protected:
+    std::shared_ptr<Level> level;
 
+   public:
     Entity(vec2 pos = {0.0f, 0.0f}, char symbol = '?', int depth = 0, std::shared_ptr<Level> level = nullptr) : pos(pos), symbol(symbol), depth(depth), level(level){};
 
-    void init();
-    void update();
+   public:
+    // Getters
 
-    void move(int direction);  // Move in a certain direction, checking for collisions
+    vec2 get_pos() const
+    {
+        return pos;
+    }
 
-    virtual ~Entity() = default;
+    char get_symbol() const
+    {
+        return symbol;
+    }
+
+    int get_depth() const
+    {
+        return depth;
+    }
+    std::shared_ptr<Level> get_level() const
+    {
+        return level;
+    }
+
+    // Setters
+
+    void set_pos(const vec2& new_pos)
+    {
+        pos = new_pos;
+    }
+    void set_symbol(char new_symbol)
+    {
+        symbol = new_symbol;
+    }
+    void set_depth(int new_depth)
+    {
+        depth = new_depth;
+    }
+
+    // Movement
+
+    virtual void move(int direction);
 };
 
 class Player : public Entity
@@ -30,7 +66,10 @@ class Player : public Entity
    public:
     Player(vec2 pos = {0.0f, 0.0f}, char symbol = '@', int depth = 0, std::shared_ptr<Level> level = nullptr) : Entity(pos, symbol, depth, level){};
 
-    void move(int direction);
+    void set_level(std::shared_ptr<Level> new_level)
+    {
+        level = new_level;
+    }
 };
 
-extern std::vector<std::shared_ptr<Entity>> entities;  // Global list of entities
+extern std::vector<std::shared_ptr<Entity>> entities;

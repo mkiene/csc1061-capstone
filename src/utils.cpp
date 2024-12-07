@@ -1,5 +1,6 @@
 #include "../include/utils.h"
 
+#include <iostream>
 #include <random>
 
 #include "../include/config.h"
@@ -39,18 +40,14 @@ bool in_line_of_sight(int x1, int y1, int x2, int y2, char blocker)  // adaptati
             y1 += sy;
         }
 
-        /*
-
         // check the next tile after movement for obstacles
-        if (level.chars[y1][x1] == blocker)
+        if (levels[0]->get_tile(x1, y1).symbol == blocker)
         {
             if (x1 == x2 && y1 == y2)
                 return true;  // Line of sight includes the obstacle if it's the target
 
             return false;  // Line of sight is blocked by an obstacle
         }
-
-        */
     }
     return true;  // Line of sight is clear
 }
@@ -58,4 +55,9 @@ bool in_line_of_sight(int x1, int y1, int x2, int y2, char blocker)  // adaptati
 int sqr_dist(int x1, int y1, int x2, int y2)  // Return squared distance, as sqrt is expensive and unnescessary for this program
 {
     return (x2 - x1) * (x2 - x1) + (y2 - y1) * (y2 - y1);
+}
+
+void clear_screen()
+{
+    std::cout << "\033[2J\033[1;1H";
 }
