@@ -1,74 +1,132 @@
+/*
+ * Max Kiene
+ * Sunday, December 8th, 2024
+ * CSC1061 Capstone
+ */
+
 #pragma once
 
-#include <cmath>
-#include <vector>
+#include <random>
 
-int get_random_int(int min, int max);
-bool in_line_of_sight(int x1, int y1, int x2, int y2, char blocker);
-int sqr_dist(int x1, int y1, int x2, int y2);
-void clear_screen();
+/*
+ * Custom vec2 implementation.
+ *
+ * Represents a vector of real numbers, and supports the following vector operations:
+ * - Addition, subtraction, multiplication, and division
+ * - Comparing (==, <(=) >(=))
+ * - magnitude(): Returns the length of the vector
+ * - normalize(): Scales the x and y components to be values between 0 and 1
+ * - rounded(): Rounds the x and y components
+ * - sign(): Evaluates the sign of the x and y components, returning -1, 0, or 1
+ */
 
-struct vec2  // Custom 2d vector implementation
+struct vec2
 {
     float x;
     float y;
 
     vec2() = default;
-    vec2(float x, float y) : x(x), y(y)
+
+    template <typename T>
+    explicit vec2(T x, T y) : x(static_cast<float>(x)), y(static_cast<float>(y))
     {
     }
 
     vec2 operator+(const vec2 &other) const
     {
-        return {x + other.x, y + other.y};
+        return vec2(x + other.x, y + other.y);
     }
 
     vec2 operator-(const vec2 &other) const
     {
-        return {x - other.x, y - other.y};
+        return vec2(x - other.x, y - other.y);
     }
 
     vec2 operator*(float scalar) const
     {
-        return {x * scalar, y * scalar};
+        return vec2(x * scalar, y * scalar);
     }
 
     vec2 operator/(float scalar) const
     {
-        return {x / scalar, y / scalar};
+        return vec2(x / scalar, y / scalar);
     }
+
+    bool operator==(const vec2 &other) const
+    {
+        return (x == other.x) && (y == other.y);
+    }
+
+    bool operator<(const vec2 &other) const
+    {
+        return (x < other.x) && (y < other.y);
+    }
+
+    bool operator<=(const vec2 &other) const
+    {
+        return (x <= other.x) && (y <= other.y);
+    }
+
+    bool operator>(const vec2 &other) const
+    {
+        return (x > other.x) && (y > other.y);
+    }
+
+    bool operator>=(const vec2 &other) const
+    {
+        return (x >= other.x) && (y >= other.y);
+    }
+
     float magnitude() const
     {
-        return std::sqrt(x * x + y * y);
+        return abs(std::sqrt(x * x + y * y));
     }
 
     vec2 normalize() const
     {
         float mag = magnitude();
-        return {x / mag, y / mag};
+        return vec2(x / mag, y / mag);
+    }
+
+    vec2 rounded() const
+    {
+        return vec2(std::round(x), std::round(y));
     }
 
     vec2 sign() const
     {
-        return {float(x > 0) - (x < 0),  // 1 if positive, -1 if negative, 0 if zero
-                float(y > 0) - (y < 0)};
+        return vec2((x > 0.0f) - (x < 0.0f), (y > 0.0f) - (y < 0.0f));  // 1 if positive, -1 if negative, 0 if zero
     }
 };
 
+// Template function for returning a random integer between min and max.
+
 template <typename T>
-std::vector<std::vector<std::vector<T>>> init_3d_tiles(size_t cols, size_t rows, size_t stack_size, const T &default_value)  // Unapplied
+int get_random_int(T min, T max)
 {
-    std::vector<std::vector<std::vector<T>>> tiles;
+    int imin = static_cast<int>(min);
+    int imax = static_cast<int>(max);
 
-    tiles.resize(cols);
-    for (size_t c = 0; c < cols; c++)
-    {
-        tiles[c].resize(rows);
-        for (size_t r = 0; r < rows; r++)
-        {
-            tiles[c][r].resize(stack_size, default_value);
-        }
-    }
-
-    return tiles;
+    static std::random_device dev;
+    static std::mt19937 rng(dev());
+    std::uniform_int_distribution<int> dist(imin, imax);
+    return dist(rng);
 }
+
+// Template function for returning a random real number between min and max.
+
+template <typename T>
+float get_random_float(T min, T max)
+{
+    float fmin = static_cast<float>(min);
+    float fmax = static_cast<float>(max);
+
+    static std::random_device dev;
+    static std::mt19937 rng(dev());
+    std::uniform_real_distribution<float> dist(fmin, fmax);
+    return dist(rng);
+}
+
+bool in_line_of_sight(vec2 start, vec2 end, char blocker);
+float sqr_dist(float x1, float y1, float x2, float y2);
+void clear_screen();

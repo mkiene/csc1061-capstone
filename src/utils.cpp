@@ -1,61 +1,81 @@
+/*
+ * Max Kiene
+ * Sunday, December 8th, 2024
+ * CSC1061 Capstone
+ */
+
 #include "../include/utils.h"
 
 #include <iostream>
-#include <random>
 
-#include "../include/config.h"
+#include "../include/level.h"
 
-int get_random_int(int min, int max)
+/*
+ * Determines whether a straight line between two points is blocked by a specified character.
+ * Uses Bresenham's line algorithm to trace the path between the start and end points.
+ * Returns true if the line of sight is clear or the endpoint is reached without encountering a blocker.
+ */
+
+bool in_line_of_sight(vec2 start, vec2 end, char blocker)
 {
-    std::random_device dev;                                                   // for nondeterministic generation
-    std::mt19937 rng(dev());                                                  // mersenne twister
-    std::uniform_int_distribution<std::mt19937::result_type> dist(min, max);  // equal probability
-    return dist(rng);                                                         // result
-}
+    int x1 = static_cast<int>(start.x);
+    int y1 = static_cast<int>(start.y);
 
-bool in_line_of_sight(int x1, int y1, int x2, int y2, char blocker)  // adaptation of bresenham's line algorithm.
-{
+    int x2 = static_cast<int>(end.x);
+    int y2 = static_cast<int>(end.y);
+
     int dx = std::abs(x2 - x1);
     int dy = -std::abs(y2 - y1);
     int sx = (x1 < x2) ? 1 : -1;
     int sy = (y1 < y2) ? 1 : -1;
-    int err = dx + dy, e2;  // error value e_xy
+    int err = dx + dy, e2;
 
     while (true)
     {
-        if (x1 == x2 && y1 == y2)
+        if (x1 == x2 && y1 == y2)  // Reached the end point
         {
-            break;  // Line has reached the target
+            break;
         }
 
-        e2 = current_torch_radius * 2 * err;
-        if (e2 >= dy)
-        {  // e_xy + e_x > 0
+        e2 = 2 * err;
+        if (e2 >= dy)  // Move horizontally
+        {
             err += dy;
             x1 += sx;
         }
-        if (e2 <= dx)
-        {  // e_xy + e_y < 0
+        if (e2 <= dx)  // Move vertically
+        {
             err += dx;
             y1 += sy;
         }
 
-        // check the next tile after movement for obstacles
+        // Check if the current tile contains the blocking character
         if (levels[0]->get_tile(x1, y1).symbol == blocker)
         {
-            if (x1 == x2 && y1 == y2)
-                return true;  // Line of sight includes the obstacle if it's the target
+            if (x1 == x2 && y1 == y2)  // Allow reaching the endpoint if it is the blocker
+                return true;
 
-            return false;  // Line of sight is blocked by an obstacle
+            return false;  // Blocker encountered before reaching the endpoint
         }
     }
-    return true;  // Line of sight is clear
+    return true;
 }
 
-int sqr_dist(int x1, int y1, int x2, int y2)  // Return squared distance, as sqrt is expensive and unnescessary for this program
+/*
+ * Calculates the squared distance (Euclidean) between two points (x1, y1) and (x2, y2).
+ * Avoids using square roots for better performance in comparisons.
+ * Returns the squared distance as a float.
+ */
+
+float sqr_dist(float x1, float y1, float x2, float y2)
 {
     return (x2 - x1) * (x2 - x1) + (y2 - y1) * (y2 - y1);
 }
+
+/*
+ * Clears the terminal screen and resets the cursor position to the top-left corner.
+ * Achieved using ANSI escape codes.
+ */
 
 void clear_screen()
 {

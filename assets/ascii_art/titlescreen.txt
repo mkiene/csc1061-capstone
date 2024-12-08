@@ -6,4 +6,4 @@ P'   MM   `7.dP'    `YM. MM   `MM..dP'     `M  MM      MM
      MM     `Mb.    ,dP' MM   `Mb.`Mb.     ,'  MM      MM  
    .JMML.     `"bmmd"' .JMML. .JMM. `"bmmmd' .JMML.  .JMML.
                                                            
-                                 Proof-of-Concept Demo v1.1
+                                      Proof-of-Concept Demo

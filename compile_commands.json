@@ -1,0 +1,80 @@
+[
+{
+  "directory": "/Users/max/CSC1061-Capstone",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++  -I/Users/max/CSC1061-Capstone/include -Wall -Wextra -Wconversion -std=gnu++20 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.0.sdk -o CMakeFiles/Torch.dir/src/config.cpp.o -c /Users/max/CSC1061-Capstone/src/config.cpp",
+  "file": "/Users/max/CSC1061-Capstone/src/config.cpp",
+  "output": "CMakeFiles/Torch.dir/src/config.cpp.o"
+},
+{
+  "directory": "/Users/max/CSC1061-Capstone",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++  -I/Users/max/CSC1061-Capstone/include -Wall -Wextra -Wconversion -std=gnu++20 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.0.sdk -o CMakeFiles/Torch.dir/src/entity.cpp.o -c /Users/max/CSC1061-Capstone/src/entity.cpp",
+  "file": "/Users/max/CSC1061-Capstone/src/entity.cpp",
+  "output": "CMakeFiles/Torch.dir/src/entity.cpp.o"
+},
+{
+  "directory": "/Users/max/CSC1061-Capstone",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++  -I/Users/max/CSC1061-Capstone/include -Wall -Wextra -Wconversion -std=gnu++20 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.0.sdk -o CMakeFiles/Torch.dir/src/game.cpp.o -c /Users/max/CSC1061-Capstone/src/game.cpp",
+  "file": "/Users/max/CSC1061-Capstone/src/game.cpp",
+  "output": "CMakeFiles/Torch.dir/src/game.cpp.o"
+},
+{
+  "directory": "/Users/max/CSC1061-Capstone",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++  -I/Users/max/CSC1061-Capstone/include -Wall -Wextra -Wconversion -std=gnu++20 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.0.sdk -o CMakeFiles/Torch.dir/src/generation.cpp.o -c /Users/max/CSC1061-Capstone/src/generation.cpp",
+  "file": "/Users/max/CSC1061-Capstone/src/generation.cpp",
+  "output": "CMakeFiles/Torch.dir/src/generation.cpp.o"
+},
+{
+  "directory": "/Users/max/CSC1061-Capstone",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++  -I/Users/max/CSC1061-Capstone/include -Wall -Wextra -Wconversion -std=gnu++20 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.0.sdk -o CMakeFiles/Torch.dir/src/input.cpp.o -c /Users/max/CSC1061-Capstone/src/input.cpp",
+  "file": "/Users/max/CSC1061-Capstone/src/input.cpp",
+  "output": "CMakeFiles/Torch.dir/src/input.cpp.o"
+},
+{
+  "directory": "/Users/max/CSC1061-Capstone",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++  -I/Users/max/CSC1061-Capstone/include -Wall -Wextra -Wconversion -std=gnu++20 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.0.sdk -o CMakeFiles/Torch.dir/src/level.cpp.o -c /Users/max/CSC1061-Capstone/src/level.cpp",
+  "file": "/Users/max/CSC1061-Capstone/src/level.cpp",
+  "output": "CMakeFiles/Torch.dir/src/level.cpp.o"
+},
+{
+  "directory": "/Users/max/CSC1061-Capstone",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++  -I/Users/max/CSC1061-Capstone/include -Wall -Wextra -Wconversion -std=gnu++20 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.0.sdk -o CMakeFiles/Torch.dir/src/main.cpp.o -c /Users/max/CSC1061-Capstone/src/main.cpp",
+  "file": "/Users/max/CSC1061-Capstone/src/main.cpp",
+  "output": "CMakeFiles/Torch.dir/src/main.cpp.o"
+},
+{
+  "directory": "/Users/max/CSC1061-Capstone",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++  -I/Users/max/CSC1061-Capstone/include -Wall -Wextra -Wconversion -std=gnu++20 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.0.sdk -o CMakeFiles/Torch.dir/src/rgb.cpp.o -c /Users/max/CSC1061-Capstone/src/rgb.cpp",
+  "file": "/Users/max/CSC1061-Capstone/src/rgb.cpp",
+  "output": "CMakeFiles/Torch.dir/src/rgb.cpp.o"
+},
+{
+  "directory": "/Users/max/CSC1061-Capstone",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++  -I/Users/max/CSC1061-Capstone/include -Wall -Wextra -Wconversion -std=gnu++20 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.0.sdk -o CMakeFiles/Torch.dir/src/room.cpp.o -c /Users/max/CSC1061-Capstone/src/room.cpp",
+  "file": "/Users/max/CSC1061-Capstone/src/room.cpp",
+  "output": "CMakeFiles/Torch.dir/src/room.cpp.o"
+},
+{
+  "directory": "/Users/max/CSC1061-Capstone",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++  -I/Users/max/CSC1061-Capstone/include -Wall -Wextra -Wconversion -std=gnu++20 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.0.sdk -o CMakeFiles/Torch.dir/src/terminal.cpp.o -c /Users/max/CSC1061-Capstone/src/terminal.cpp",
+  "file": "/Users/max/CSC1061-Capstone/src/terminal.cpp",
+  "output": "CMakeFiles/Torch.dir/src/terminal.cpp.o"
+},
+{
+  "directory": "/Users/max/CSC1061-Capstone",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++  -I/Users/max/CSC1061-Capstone/include -Wall -Wextra -Wconversion -std=gnu++20 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.0.sdk -o CMakeFiles/Torch.dir/src/ui.cpp.o -c /Users/max/CSC1061-Capstone/src/ui.cpp",
+  "file": "/Users/max/CSC1061-Capstone/src/ui.cpp",
+  "output": "CMakeFiles/Torch.dir/src/ui.cpp.o"
+},
+{
+  "directory": "/Users/max/CSC1061-Capstone",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++  -I/Users/max/CSC1061-Capstone/include -Wall -Wextra -Wconversion -std=gnu++20 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.0.sdk -o CMakeFiles/Torch.dir/src/utils.cpp.o -c /Users/max/CSC1061-Capstone/src/utils.cpp",
+  "file": "/Users/max/CSC1061-Capstone/src/utils.cpp",
+  "output": "CMakeFiles/Torch.dir/src/utils.cpp.o"
+},
+{
+  "directory": "/Users/max/CSC1061-Capstone",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++  -I/Users/max/CSC1061-Capstone/include -Wall -Wextra -Wconversion -std=gnu++20 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.0.sdk -o CMakeFiles/Torch.dir/src/viewport.cpp.o -c /Users/max/CSC1061-Capstone/src/viewport.cpp",
+  "file": "/Users/max/CSC1061-Capstone/src/viewport.cpp",
+  "output": "CMakeFiles/Torch.dir/src/viewport.cpp.o"
+}
+]

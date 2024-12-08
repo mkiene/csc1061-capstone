@@ -1,37 +1,33 @@
+/*
+ * Max Kiene
+ * Sunday, December 8th, 2024
+ * CSC1061 Capstone
+ *
+ * The Viewport handles the display of the game onto the screen. You can think of it
+ * as the game's 'camera'.
+ *
+ * - The viewport has two positions: 'level_pos', which is relative to the level's
+ *   origin (Level::pos), and 'term_pos', which is relative to the terminal window.
+ * - The viewport shows only a portion of the level. The level can be theoretically
+ *   infinitely big.
+ * - The viewport renders 'depth' by looping through each visible level tile and
+ *   entity, storing their corresponding depths to a buffer. Then, this buffer is
+ *   sorted, and only the object with the least depth is drawn. This effectively
+ *   simulates three dimensionality (albeit top-down).
+ * - There can be potentially multiple viewports per terminal, but this project
+ *   currently only utilizes one.
+ * - The viewport is very efficient, since the only tiles which the game needs to
+ *   worry about are the ones immediately visible through the viewport, which can
+ *   be directly calculated instead of looping through every tile.
+ */
+
 #pragma once
 
-#include <memory>
 #include <vector>
 
 #include "entity.h"
 #include "level.h"
-#include "terminal.h"
 #include "utils.h"
-
-/*
-The Viewport handles the display of the game onto the screen. You can think of it
-as the game's 'camera'.
-
-A few important points:
-
-   -  The viewport has two positions: 'level_pos', which is relative to the level's
-      origin (Level::pos), and 'term_pos', which is relative to the terminal window.
-
-   -  The viewport shows only a portion of the level. The level can be theoretically
-      infinitely big.
-
-   -  The viewport renders 'depth' by looping through each visible level tile and
-      entity, storing their corresponding depths to a buffer. Then, this buffer is
-      sorted, and only the object with the least depth is drawn. This effectively
-      simulates three dimensionality (albeit top-down).
-
-   -  There can be potentially multiple viewports per terminal, but this project
-      currently only utilizes one.
-
-   -  The viewport is very efficient, since the only tiles which the game needs to
-      worry about are the ones immediately visible through the viewport, which can
-      be directly calculated instead of looping through every tile.
-*/
 
 class Viewport
 {
@@ -44,8 +40,7 @@ class Viewport
     std::shared_ptr<Entity> target;  // Target entity to follow
 
    public:
-    // Constructor
-    Viewport(const vec2& level_pos = {0.0f, 0.0f}, const vec2& term_pos = {0.0f, 0.0f}, const vec2& size = {0.0f, 0.0f}, std::shared_ptr<Level> level = nullptr) : level_pos(level_pos), term_pos(term_pos), size(size), level(level)
+    Viewport(const vec2& level_pos = vec2(0.0f, 0.0f), const vec2& term_pos = vec2(0.0f, 0.0f), const vec2& size = vec2(0.0f, 0.0f), std::shared_ptr<Level> level = nullptr) : level_pos(level_pos), term_pos(term_pos), size(size), level(level)
     {
     }
 

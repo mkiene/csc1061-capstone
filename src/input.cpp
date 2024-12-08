@@ -1,7 +1,10 @@
-#include "../include/input.h"
+/*
+ * Max Kiene
+ * Sunday, December 8th, 2024
+ * CSC1061 Capstone
+ */
 
-#include <iostream>
-#include <ranges>
+#include "../include/input.h"
 
 #include "../include/config.h"
 #include "../include/entity.h"
@@ -12,7 +15,11 @@
 #include "../include/utils.h"
 #include "../include/viewport.h"
 
-char get_ch()  // Retrieve keyboard input
+char inp = 0;
+
+// get_ch(): Get input
+
+char get_ch()
 {
 #ifdef _WIN32
     char c = 0;
@@ -27,6 +34,8 @@ char get_ch()  // Retrieve keyboard input
 #endif
 }
 
+// Called when the game is unpaused
+
 void handle_gameplay_input(char& inp)
 {
     Entity* player = entities[0].get();
@@ -38,52 +47,41 @@ void handle_gameplay_input(char& inp)
             menu.trigger_titlescreen();
             game_paused = true;
             break;
-            // player movement
-        case 'h':  // move player left
+
+            // Player movement
+        case 'h':  // Move player left
+        case 'a':
             player->move(0);
             break;
-        case 'k':  // move player up
+        case 'k':  // Move player up
+        case 'w':
             player->move(1);
             break;
-        case 'l':  // move player right
+        case 'l':  // Move player right
+        case 'd':
             player->move(2);
             break;
-        case 'j':  // move player down
+        case 'j':  // Move player down
+        case 's':
             player->move(3);
             break;
 
-        case 'n':
+        case 'n':  // Restart demo
             init_game();
             break;
 
-        case 't':
+        case 't':  // Toggle LOS
             enable_LOS = !enable_LOS;
             break;
 
-            // viewport movement
-
-            if (viewports.size() > 0)
-            {
-                case 'w':  // move viewport[0] up
-                    viewports[0]->set_level_pos({viewports[0]->get_level_pos().x, viewports[0]->get_level_pos().y - 1.0f});
-                    break;
-                case 'a':  // move viewport[0] left
-                    viewports[0]->set_level_pos({viewports[0]->get_level_pos().x - 1.0f, viewports[0]->get_level_pos().y});
-                    break;
-                case 's':  // move viewport[0] down
-                    viewports[0]->set_level_pos({viewports[0]->get_level_pos().x, viewports[0]->get_level_pos().y + 1.0f});
-                    break;
-                case 'd':  // move viewport[0] right
-                    viewports[0]->set_level_pos({viewports[0]->get_level_pos().x + 1.0f, viewports[0]->get_level_pos().y});
-                    break;
-
-                    // refresh viewport
-                case 'r':
-                    viewports[0]->init();
-                    break;
-            }
+            // Refresh viewport
+        case 'r':
+            viewports[0]->init();
+            break;
     }
 }
+
+// Called when the game is paused
 
 void handle_menu_input(char& inp)
 {
@@ -98,12 +96,15 @@ void handle_menu_input(char& inp)
         case 50:  // 2: Controls
             menu.trigger_controls();
             break;
-        case 51:  // 3: README
+        case 51:  // 3: Quit
+            menu.exit_game();
             break;
     }
 }
 
-void input(char& inp)  // Direct input
+// Directs input
+
+void input(char& inp)
 {
     inp = get_ch();
 

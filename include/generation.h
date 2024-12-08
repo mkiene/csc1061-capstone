@@ -1,10 +1,17 @@
-#include <memory>
-#include <unordered_map>
+/*
+ * Max Kiene
+ * Sunday, December 8th, 2024
+ * CSC1061 Capstone
+ */
+
 #include <vector>
 
 #include "level.h"
-#include "room.h"
-#include "utils.h"
+
+/*
+ * Generator class for level generation.
+ * Holds current level and provides two generation algorithms.
+ */
 
 class Generator
 {
